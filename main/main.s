@@ -20,7 +20,7 @@ rest:
   sta PCR0
   lda #$ff
   sta DDRB2
-  
+
   jsr lcd_init
   jsr startup
   cli
@@ -28,7 +28,7 @@ rest:
   jmp loop
 
 print_init:
-  
+
   rts
 
 startup:
