@@ -2,7 +2,7 @@
 * rom:#E000-ffff
 * RAM:#0000-7fff
 * IO:8000-804F
-* earthnet:
+* earthnet:8100-8180
 
 
 # road map
