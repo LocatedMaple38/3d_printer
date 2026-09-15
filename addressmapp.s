@@ -193,6 +193,7 @@ TXSTA6 = $5C
 TXSTARTH = $59
 TXSTARTL = $5A
 VDMCN = $13
+
 verion = $00
 material = $02
 material_mod = $07
