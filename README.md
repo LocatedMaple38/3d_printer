@@ -1,7 +1,7 @@
 # address map:
 * rom:#E000-ffff
 * RAM:#0000-7fff
-* IO:8000-
+* IO:8000-804F
 * earthnet:
 
 
