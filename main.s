@@ -1,5 +1,6 @@
 .SETCPU 65C02
-
+.INCLUDE addressmapp.s
+.INCLUDE irq.s
 .SEGMENT CODE
 rest:
   sei
