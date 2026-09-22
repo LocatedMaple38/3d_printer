@@ -9,6 +9,7 @@ rest:
   sta DDRB0						;steper moter 0
   sta DDRA0						;steper moter 1
   sta DDRB1						;steper moter 2
+  lda $%00000111
   sta DDRA1						;spi decoder
   lda 
   
