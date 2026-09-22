@@ -13,7 +13,7 @@ rest:
   sta DDRA0
   lda #%00010100
   sta ACR0
-  lda #%10000111
+  lda #%10000111        ;int enable, sr enable, CA1,2 enable (filimnet_0, 1)
   sta $IER0
   lda #%
   
