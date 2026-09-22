@@ -5,6 +5,8 @@
 rest:
   sei
   cld
+  ldx #$00
+  txs
   lda #%11111111
   sta DDRB0						;steper moter 0
   sta DDRA0						;steper moter 1
