@@ -11,7 +11,11 @@ rest:
   sta DDRB0
   lda #$03
   sta DDRA0
-  
+  lda #%00010100
+  sta ACR0
+  lda #%10000111
+  sta $IER0
+  lda #%
   
 loop:
   jmp loop
