@@ -15,9 +15,3 @@ temp_bed_min = $
 temp_bed_max = $
 
 filiment_ram = $02
-filiment_hw_0 = #%00000000
-filiment_hw_1 = #%00000001
-filiment_hw_2 = #%00000010
-filiment_hw_3 = #%00000011
-
-
