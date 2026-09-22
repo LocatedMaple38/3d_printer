@@ -6,10 +6,10 @@ rest:
   sei
   cld
   lda #%11111111
-  sta DDRB0
-  sta DDRA0
-  sta DDRB1
-  sta DDRA1
+  sta DDRB0						;steper moter 0
+  sta DDRA0						;steper moter 1
+  sta DDRB1						;steper moter 2
+  sta DDRA1						;spi decoder
   lda 
   
 
