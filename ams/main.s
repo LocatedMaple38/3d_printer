@@ -14,8 +14,11 @@ rest:
   lda #%00010100
   sta ACR0
   lda #%10000111        ;int enable, sr enable, CA1,2 enable (filimnet_0, 1)
-  sta $IER0
-  lda #%
+  sta IER0
+  lda #%00001100
+  sta ARC1
+  lda #%10000111
+  sta IER1
   
 loop:
   jmp loop
