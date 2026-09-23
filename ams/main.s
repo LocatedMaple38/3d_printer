@@ -20,6 +20,8 @@ rest:
   lda #%10000111
   sta IER1
   
+  jmp loop
+  
 loop:
   jmp loop
 
