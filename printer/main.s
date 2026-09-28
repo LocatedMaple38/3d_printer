@@ -1,6 +1,9 @@
+;printer
+.org $E000
 .SETCPU 65C02
-.INCLUDE ../addressmapp/*.s
+.INCLUDE ../addressmap/*.s
 .INCLUDE irq.s
+.INCLUDE print.s
 .SEGMENT CODE
 rest:
   sei
@@ -11,8 +14,7 @@ rest:
   sta DDRB0						;steper moter 0
   sta DDRA0						;steper moter 1
   sta DDRB1						;steper moter 2
-  lda $%00000111
-  sta DDRA1						;spi decoder
+  sta DDRA1						;extruder
   lda 
   
 
@@ -20,6 +22,7 @@ rest:
 loop:
  jmp loop
 
+.org $FFFA
 .SEGMENT RESETVEC
   .word nmi
   .word reset
