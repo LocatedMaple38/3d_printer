@@ -1,15 +1,5 @@
 ;printer
 .setcpu "65C02"
-.INCLUDE "~/git/3d_printer/printer/addressmap/UTF-8_bit_map.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/eathernet.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/filiment.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/spi.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/via.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/zp.s"
-.INCLUDE "./irq.s"
-.INCLUDE "./print.s"
-.INCLUDE "./sd_card.s"
-.INCLUDE "~/git/3d_printer/printer/addressmap/rom.s"
 
 .SEGMENT CODE
 rest:
@@ -32,7 +22,7 @@ rest:
   STA ACR1
   LDA #%00011100					;T1/2 disable, SR out under CB1
   STA PCR2
-  
+
   JMP loop
 
 loop:
