@@ -14,7 +14,7 @@ skip_loop1:
 skip_loop2:
   JSR spi_read
   DEX
-  BNE skip_loop
+  BNE skip_loop2
 
   LDX #4
 skip_status:

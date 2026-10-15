@@ -1,7 +1,16 @@
 ;printer
 .setcpu "65C02"
 
-.SEGMENT CODE
+.INCLUDE "../addresmap/via.s"
+.INCLUDE "../addresmap/eathernet.s"
+.INCLUDE "../addresmap/filiment.s"
+.INCLUDE "../addresmap/spi.s"
+.INCLUDE "../addresmap/zp.s"
+.INCLUDE "irq.s"
+.INCLUDE "print.s"
+.INCLUDE "sd_card.s"
+
+.SEGMENT "CODE"
 rest:
   SEI
   CLD
@@ -19,7 +28,7 @@ rest:
   STA PCR1
   STA PCR2
   LDA #%00000100					;T1 disable, T2 Timed int, SR Shift in under T2, latch desable A/B
-  STA ACR1
+  STA ARC1
   LDA #%00011100					;T1/2 disable, SR out under CB1
   STA PCR2
 
@@ -27,3 +36,9 @@ rest:
 
 loop:
  JMP loop
+
+spi_read:
+  rts
+
+spi_write:
+  rts
