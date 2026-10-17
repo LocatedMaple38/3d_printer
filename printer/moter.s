@@ -1,0 +1,8 @@
+home_axis:
+  SMB3 status
+  LDA #%01010001
+  STA PORTA0
+  STA PORTB0
+  STZ T1LL0
+  STA T1LH0
+  RTS
